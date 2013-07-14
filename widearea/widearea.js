@@ -138,7 +138,7 @@
   function _renewIconsPosition(textarea, iconPanel, textAreaPosition) {
     var currentTextareaPosition = textAreaPosition || _getOffset(textarea);
     //set icon panel position
-    iconPanel.style.left = currentTextareaPosition.left + currentTextareaPosition.width - 21 + "px";
+    iconPanel.style.left = currentTextareaPosition.left + currentTextareaPosition.width - 36 + "px";
     iconPanel.style.top  = currentTextareaPosition.top + "px";
   }
 
