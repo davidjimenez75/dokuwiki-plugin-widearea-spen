@@ -1,7 +1,7 @@
 base   widearea
-author Matthias Schulte
-email  dokuwiki@lupo49.de
-date   2010-07-10
+author Matthias Schulte && Ivan Smirnov
+email  dokuwiki@lupo49.de && isgsmirnov@gmail.com
+date   2016-01-06
 name   widearea plugin
-desc   Uses the WideArea JavaScript and CSS library inside the DokuWiki editor
-url    http://www.dokuwiki.org/plugin:widearea
+desc   This is Matthias Schulte's plugin that uses the WideArea JavaScript and CSS library inside the DokuWiki editor. Edited by Ivan for better fonts and no fading when inactive.
+url    https://github.com/issmirnov/dokuwiki-plugin-widearea.git

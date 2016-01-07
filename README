@@ -2,7 +2,7 @@ widearea Plugin for DokuWiki
 
 Uses the WideArea JavaScript and CSS library inside the DokuWiki editor.
 
-https://github.com/usablica/widearea
+https://github.com/issmirnov/dokuwiki-plugin-widearea (forked from https://github.com/lupo49/dokuwiki-plugin-widearea)
 
 All documentation for this plugin can be found at
 https://www.dokuwiki.org/plugin:widearea
