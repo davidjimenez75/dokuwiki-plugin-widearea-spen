@@ -35,8 +35,9 @@
     this._options = {
       wideAreaAttr: 'data-widearea',
       exitOnEsc: true,
-      defaultColorScheme: 'light',
+      defaultColorScheme: 'dark',
       closeIconLabel: 'Close WideArea',
+      saveIconLabel: 'Save',
       changeThemeIconLabel: 'Toggle Color Scheme',
       fullScreenIconLabel: 'WideArea Mode'
     };
@@ -240,7 +241,7 @@
     //disable dragging
     closeIcon.draggable = false;
 
-    //create close icon
+    //create change theme icon
     var changeThemeIcon = document.createElement('a');
     changeThemeIcon.href = 'javascript:void(0);';
     changeThemeIcon.className = 'widearea-icon changeTheme';
@@ -252,8 +253,25 @@
     //disable dragging
     changeThemeIcon.draggable = false;
 
+
+    //create save icon
+    var saveIcon = document.createElement('a');
+    saveIcon.href = 'javascript:void(0);';
+    saveIcon.className = 'widearea-icon save';
+    saveIcon.title = this._options.saveIconLabel;
+    saveIcon.onclick = function(){
+      _saveContent.call(self);
+    };
+
+    //disable dragging
+    saveIcon.draggable = false;
+
+    
+    // add icons to control panel
     controlPanel.appendChild(closeIcon);
     controlPanel.appendChild(changeThemeIcon);
+    controlPanel.appendChild(saveIcon);
+
 
     //create overlay layer
     var overlayLayer = document.createElement('div');
@@ -338,6 +356,24 @@
       document.detachEvent('onkeydown', this._onKeyDown);
     }
   }
+
+  /**
+   * Save the content pressing the pressing the save buttom of Dokuwiki
+   *
+   * @api private
+   * @method _saveContent
+   */
+  function _saveContent() {
+    var saveButtom  = document.querySelector("#edbtn__save");
+    _disableFullScreen.call(self);
+    setTimeout(function() {
+      // Execution paused for 1 second
+    }, 1000);
+    saveButtom.click();
+    alert("✔ Content saved. Please wait.");
+    saveButtom.click();
+  }
+
 
   /**
    * Overwrites obj1's values with obj2's and adds obj2's if non existent in obj1
