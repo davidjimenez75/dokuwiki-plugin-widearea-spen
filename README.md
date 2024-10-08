@@ -1,5 +1,12 @@
 # Widearea Plugin for DokuWiki
 
+## TO-DO LIST
+
+- [x] Dark Mode by default
+- [x] Added Save buttom in full screen editor
+- [x] Testing on Galaxy Tab S8 with SPEN (SPEN drawing to text conversion working OK)
+
+----
 
 This plugin uses the [WideArea JavaScript and CSS library](https://github.com/usablica/widearea)
  to add an expanded text edit field in the DokuWiki editor. You can see a demo 
